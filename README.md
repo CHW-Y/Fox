@@ -32,3 +32,7 @@
 
 (아이디에 맞춰서 따로 저장)
 `데이터 저장` -> `데이터 로드`
+## 엑셀데이터
+https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4GMAQ/edit?usp=sharing
+## 엑셀 다운로드 방법
+
