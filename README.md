@@ -37,6 +37,6 @@ https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4G
 ## 엑셀 다운로드 방법
 ![image](https://user-images.githubusercontent.com/33707494/131534324-45d92cbc-b021-4ccc-98c7-f770b59f76f1.png)
 
-Add Sheet Name통해서 원하는 시트 이름으로 찾을 수 있음
-그냥 Download data하면 전체 시트 불러옴
+- Add Sheet Name통해서 원하는 시트 이름으로 찾을 수 있음
+- 그냥 Download data하면 전체 시트 불러옴
 
