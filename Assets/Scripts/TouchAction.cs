@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.XR.ARFoundation;
-//using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class TouchAction : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class TouchAction : MonoBehaviour
     Animator anim;
     //ARRaycastManager raycastManager;
     //List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    bool isSelected = false;
 
     void Start()
     {
@@ -39,8 +40,29 @@ public class TouchAction : MonoBehaviour
                     // 선택한 오브젝트의 태그가 Girl이면
                     if (hitInfo.collider.tag == "Girl")
                     {
-                        // 선택 애니메이션 실행
-                        anim.SetTrigger("Select");
+                        if (!isSelected)
+                        {
+                            // 선택 애니메이션 실행
+                            anim.SetTrigger("Select");
+                            isSelected = true;
+                        }
+                    }
+                    else
+                    {
+                        // 선택 취소
+                        isSelected = false;
+                    }
+                }
+                // 터치 후 움직일 시
+                if (touch.phase == TouchPhase.Moved)
+                {
+                    if (hitInfo.collider.tag == "head")
+                    {
+                        if (isSelected)
+                        {
+                            // 쓰다듬기 상호작용 애니메이션 실행
+                            anim.SetTrigger("");
+                        }
                     }
                 }
             }
