@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.XR.ARFoundation;
+//using UnityEngine.XR.ARSubsystems;
 
 public class TouchAction : MonoBehaviour
 {
@@ -8,11 +10,14 @@ public class TouchAction : MonoBehaviour
     GameObject girl;
     [SerializeField]
     Animator anim;
+    //ARRaycastManager raycastManager;
+    //List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void Start()
     {
         girl = GameObject.FindGameObjectWithTag("Girl");
         anim = girl.GetComponent<Animator>();
+        //raycastManager = GetComponent<ARRaycastManager>();
     }
 
     void Update()
@@ -24,9 +29,9 @@ public class TouchAction : MonoBehaviour
 
             // 터치한 좌표를 레이로 바꾼다.
             Ray ray = Camera.main.ScreenPointToRay(touch.position);
-            RaycastHit hitInfo;
 
-            if (Physics.Raycast(ray, out hitInfo))
+            //if (raycastManager.Raycast(ray, hits))
+            if(Physics.Raycast(ray, out RaycastHit hitInfo))
             {
                 // 터치가 시작 시
                 if (touch.phase == TouchPhase.Began)
