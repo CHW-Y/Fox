@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Fox1
+  companyName: None_Dev
+  productName: Unity-Chan
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -146,8 +146,13 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+<<<<<<< HEAD
     Android: com.DefaultCompany.Fox1
     Standalone: com.DefaultCompany.Fox1
+=======
+    Android: com.None_Dev.UnityChan
+    Standalone: com.NoneDev.Unity-Chan
+>>>>>>> origin/JHW
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -236,7 +241,7 @@ PlayerSettings:
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
@@ -295,62 +300,110 @@ PlayerSettings:
     - m_Textures: []
       m_Width: 192
       m_Height: 192
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 144
       m_Height: 144
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 96
       m_Height: 96
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 72
       m_Height: 72
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 48
       m_Height: 48
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 36
       m_Height: 36
+<<<<<<< HEAD
       m_Kind: 1
+=======
+      m_Kind: 0
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 192
       m_Height: 192
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 144
       m_Height: 144
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 96
       m_Height: 96
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 72
       m_Height: 72
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 48
       m_Height: 48
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
     - m_Textures: []
       m_Width: 36
       m_Height: 36
+<<<<<<< HEAD
       m_Kind: 0
+=======
+      m_Kind: 1
+>>>>>>> origin/JHW
       m_SubKind: 
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
@@ -424,7 +477,7 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags: {}
   mobileMTRendering:
-    Android: 1
+    Android: 0
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality: []
@@ -675,7 +728,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -689,7 +743,8 @@ PlayerSettings:
   gcIncremental: 1
   assemblyVersionValidation: 1
   gcWBarrierValidation: 0
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Android: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template_3D
