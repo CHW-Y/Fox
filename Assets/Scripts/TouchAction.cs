@@ -40,17 +40,9 @@ public class TouchAction : MonoBehaviour
                     // 선택한 오브젝트의 태그가 Girl이면
                     if (hitInfo.collider.tag == "Girl")
                     {
-                        if (!isSelected)
-                        {
-                            // 선택 애니메이션 실행
-                            anim.SetTrigger("Select");
-                            isSelected = true;
-                        }
-                    }
-                    else
-                    {
-                        // 선택 취소
-                        isSelected = false;
+                        // 선택 애니메이션 실행
+                        anim.SetTrigger("Select");
+                        isSelected = true;
                     }
                 }
                 // 터치 후 움직일 시
@@ -58,11 +50,8 @@ public class TouchAction : MonoBehaviour
                 {
                     if (hitInfo.collider.tag == "head")
                     {
-                        if (isSelected)
-                        {
-                            // 쓰다듬기 상호작용 애니메이션 실행
-                            anim.SetTrigger("");
-                        }
+                        // 쓰다듬기 상호작용 애니메이션 실행
+                        anim.SetTrigger("Stroke");
                     }
                 }
             }
