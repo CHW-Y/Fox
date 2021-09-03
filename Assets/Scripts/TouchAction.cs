@@ -23,34 +23,34 @@ public class TouchAction : MonoBehaviour
 
     void Update()
     {
-        // ÅÍÄ¡°¡ ½ÃÀÛµÇ¾ú´Ù¸é
+        // í„°ì¹˜ê°€ ì‹œì‘ë˜ì—ˆë‹¤ë©´
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
-            // ÅÍÄ¡ÇÑ ÁÂÇ¥¸¦ ·¹ÀÌ·Î ¹Ù²Û´Ù.
+            // í„°ì¹˜í•œ ì¢Œí‘œë¥¼ ë ˆì´ë¡œ ë°”ê¾¼ë‹¤.
             Ray ray = Camera.main.ScreenPointToRay(touch.position);
 
             //if (raycastManager.Raycast(ray, hits))
-            if(Physics.Raycast(ray, out RaycastHit hitInfo))
+            if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
-                // ÅÍÄ¡°¡ ½ÃÀÛ ½Ã
+                // í„°ì¹˜ê°€ ì‹œì‘ ì‹œ
                 if (touch.phase == TouchPhase.Began)
                 {
-                    // ¼±ÅÃÇÑ ¿ÀºêÁ§Æ®ÀÇ ÅÂ±×°¡ GirlÀÌ¸é
+                    // ì„ íƒí•œ ì˜¤ë¸Œì íŠ¸ì˜ íƒœê·¸ê°€ Girlì´ë©´
                     if (hitInfo.collider.tag == "Girl")
                     {
-                        // ¼±ÅÃ ¾Ö´Ï¸ŞÀÌ¼Ç ½ÇÇà
+                        // ì„ íƒ ì• ë‹ˆë©”ì´ì…˜ ì‹¤í–‰
                         anim.SetTrigger("Select");
                         isSelected = true;
                     }
                 }
-                // ÅÍÄ¡ ÈÄ ¿òÁ÷ÀÏ ½Ã
+                // í„°ì¹˜ í›„ ì›€ì§ì¼ ì‹œ
                 if (touch.phase == TouchPhase.Moved)
                 {
                     if (hitInfo.collider.tag == "head")
                     {
-                        // ¾²´Ùµë±â »óÈ£ÀÛ¿ë ¾Ö´Ï¸ŞÀÌ¼Ç ½ÇÇà
+                        // ì“°ë‹¤ë“¬ê¸° ìƒí˜¸ì‘ìš© ì• ë‹ˆë©”ì´ì…˜ ì‹¤í–‰
                         anim.SetTrigger("Stroke");
                     }
                 }

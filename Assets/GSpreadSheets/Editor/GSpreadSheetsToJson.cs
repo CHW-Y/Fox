@@ -486,6 +486,8 @@ public class GSpreadSheetsToJson : EditorWindow {
 		strmWriter.Close();
 
 		Debug.Log ("Created: " + fileName + ".txt");
+
+		ExcelDataClassGenerator.GenerateClass();
 	}
 
 	UserCredential GetCredential()
