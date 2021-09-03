@@ -32,18 +32,19 @@
 
 (아이디에 맞춰서 따로 저장)
 `데이터 저장` -> `데이터 로드`
+
+<br><br><br>
 ## 엑셀데이터
 https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4GMAQ/edit?usp=sharing
+<br>아마 권한이 없을텐데 권한요청을 따로 말씀해주세요.
+
+<br><br><br>
 ## 엑셀 다운로드 방법
 ![image](https://user-images.githubusercontent.com/33707494/131534324-45d92cbc-b021-4ccc-98c7-f770b59f76f1.png)
 
 - Add Sheet Name통해서 원하는 시트 이름으로 찾을 수 있음
 - 그냥 Download data하면 전체 시트 불러옴
 
-<br><br><br>
-## 엑셀 데이터 링크
-https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4GMAQ/edit?usp=sharing
-<br>아마 권한이 없을텐데 권한요청을 따로 말씀해주세요.
 
 <br><br><br>
 ## Google sheet to Json
