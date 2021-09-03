@@ -50,3 +50,25 @@ https://assetstore.unity.com/packages/tools/utilities/google-sheet-to-json-90369
 에셋을 설치해야 사용이 가능합니다.
 ![image](https://user-images.githubusercontent.com/33707494/131981668-87ffe6a3-2342-48a5-a4d9-ffc78cb092db.png)
 밑줄친 파일은 제외하고 임포트 해주세요.
+
+## Google Data 사용 방법.
+GlobalState에서 각 데이터 List를 참조해 올 수 있습니다.
+<pre>
+<code>
+public class GlobalState : MonoBehaviour
+{
+    public static List<ExceldData_Item> itemList;
+    public static List<ExceldData_Style> styleList;
+    public static List<ExceldData_Character> characterList;
+    public static List<ExceldData_Gesture> gestureList;
+
+    public static Dictionary<string, ExceldData_Item> itemDict;
+    public static Dictionary<string, ExceldData_Style> styleDict;
+    public static Dictionary<string, ExceldData_Character> charaterDict;
+    public static Dictionary<string, ExceldData_Gesture> gestureDict;
+}
+</code>
+<pre>
+
+### 방법 예시
+
