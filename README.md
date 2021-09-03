@@ -81,10 +81,10 @@ foreach(ExceldData_Character data in GlobalState.characterList)
 </pre>
 
 ## 데이터 .Txt 추가 방법
-Assets>FoxData -> .txt파일들이 있습니다
+Assets>FoxData -> .txt파일들이 있습니다<br>
 ![image](https://user-images.githubusercontent.com/33707494/131983329-9c2f5f83-4ca9-4d8d-8f7e-94b878cf62c4.png)
 
-GlobalDataImporter.cs 컴포넌트에 추가하면 됩니다.
+GlobalDataImporter.cs 컴포넌트에 추가하면 됩니다.<br>
 ![image](https://user-images.githubusercontent.com/33707494/131983256-4d1780a7-a249-41e0-ba03-fd5032690f97.png)
 
 
