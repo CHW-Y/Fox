@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class GamaDataManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         foreach(ExceldData_Character data in GlobalState.characterList)
         {
-            Debug.Log(data.ID);
+            //Debug.Log(data.ID);
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(GlobalState.itemDict.ContainsKey("사과")){
+            ExceldData_Item itemData = GlobalState.itemDict["사과"];
+            //Debug.Log(itemData.ID);
+        }
     }
 }

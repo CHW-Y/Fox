@@ -9,8 +9,13 @@ public class GameLoadingManager : MonoBehaviour
     [SerializeField]
     Slider loadingBar;
 
+    [SerializeField]
+    GameObject[] Btns;
+
     void Start()
     {
+        Btns[0].SetActive(false);
+        Btns[1].SetActive(true);
         StartCoroutine(LoadingCoroutine());
     }
 
@@ -39,29 +44,41 @@ public class GameLoadingManager : MonoBehaviour
             if(i < GlobalState.itemList.Count)
             {
                 name = GlobalState.itemList[i].Name;
-                GlobalState.itemDict.Add(name, GlobalState.itemList[i]);
-                yield return new WaitUntil(() => GlobalState.itemDict.ContainsKey(name));
+                if (name != "")
+                {
+                    GlobalState.itemDict.Add(name, GlobalState.itemList[i]);
+                    yield return new WaitUntil(() => GlobalState.itemDict.ContainsKey(name));
+                }
             }
 
             if(i < GlobalState.styleList.Count)
             {
                 name = GlobalState.styleList[i].Name;
-                GlobalState.styleDict.Add(name, GlobalState.styleList[i]);
-                yield return new WaitUntil(() => GlobalState.styleDict.ContainsKey(name));
+                if(name != "")
+                {
+                    GlobalState.styleDict.Add(name, GlobalState.styleList[i]);
+                    yield return new WaitUntil(() => GlobalState.styleDict.ContainsKey(name));
+                }
             }
 
             if(i < GlobalState.characterList.Count)
             {
                 name = GlobalState.characterList[i].Name;
-                GlobalState.charaterDict.Add(name, GlobalState.characterList[i]);
-                yield return new WaitUntil(() => GlobalState.charaterDict.ContainsKey(name));
+                if (name != "")
+                {
+                    GlobalState.charaterDict.Add(name, GlobalState.characterList[i]);
+                    yield return new WaitUntil(() => GlobalState.charaterDict.ContainsKey(name));
+                }
             }
 
             if(i < GlobalState.gestureList.Count)
             {
                 name = GlobalState.gestureList[i].Name;
-                GlobalState.gestureDict.Add(name, GlobalState.gestureList[i]);
-                yield return new WaitUntil(() => GlobalState.gestureDict.ContainsKey(name));
+                if (name != "")
+                {
+                    GlobalState.gestureDict.Add(name, GlobalState.gestureList[i]);
+                    yield return new WaitUntil(() => GlobalState.gestureDict.ContainsKey(name));
+                }
             }
 
             ++sliderCnt;
@@ -69,6 +86,8 @@ public class GameLoadingManager : MonoBehaviour
         }
       
         yield return new WaitUntil(() => true);
+        Btns[1].SetActive(false);
+        Btns[0].SetActive(true);
     }
     
 }
