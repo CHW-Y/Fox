@@ -68,7 +68,14 @@ public class GlobalState : MonoBehaviour
     public static Dictionary<string, ExceldData_Gesture> gestureDict;
 }
 </code>
-<pre>
+</pre>
 
 ### 방법 예시
-
+<pre>
+<code>
+foreach(ExceldData_Character data in GlobalState.characterList)
+{
+    Debug.Log(data.ID);
+}
+</code>
+</pre>
