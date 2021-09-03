@@ -74,12 +74,22 @@ public class GlobalState : MonoBehaviour
 </pre>
 
 <br><br><br>
-### 방법 예시
+### 방법 예시 1
 <pre>
 <code>
 foreach(ExceldData_Character data in GlobalState.characterList)
 {
     Debug.Log(data.ID);
+}
+</code>
+</pre>
+<br><br>
+### 방법 예시 2
+<pre>
+<code>
+if(GlobalState.itemDict.ContainsKey("사과")){
+    ExceldData_Item itemData = GlobalState.itemDict["사과"];
+    Debug.Log(itemData.ID);
 }
 </code>
 </pre>
