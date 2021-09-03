@@ -40,3 +40,13 @@ https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4G
 - Add Sheet Name통해서 원하는 시트 이름으로 찾을 수 있음
 - 그냥 Download data하면 전체 시트 불러옴
 
+
+## 엑셀 데이터 링크
+https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4GMAQ/edit?usp=sharing
+아마 권한이 없을텐데 권한요청을 따로 말씀해주세요.
+
+## Google sheet to Json
+https://assetstore.unity.com/packages/tools/utilities/google-sheet-to-json-90369
+에셋을 설치해야 사용이 가능합니다.
+![image](https://user-images.githubusercontent.com/33707494/131981668-87ffe6a3-2342-48a5-a4d9-ffc78cb092db.png)
+밑줄친 파일은 제외하고 임포트 해주세요.
