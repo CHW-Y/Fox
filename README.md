@@ -7,7 +7,7 @@
 `Assets > Scenes` 경로에 각자 이름으로된 Scene을 추가하여 작업 해주시길 바랍니다.
 
 
-
+<br><br><br>
 
 ## 필요 데이터
 
@@ -40,17 +40,19 @@ https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4G
 - Add Sheet Name통해서 원하는 시트 이름으로 찾을 수 있음
 - 그냥 Download data하면 전체 시트 불러옴
 
-
+<br><br><br>
 ## 엑셀 데이터 링크
 https://docs.google.com/spreadsheets/d/1kw1idAXUs6IIm9lJ_auKIDLpd9fCFW-rk9o-eL4GMAQ/edit?usp=sharing
-아마 권한이 없을텐데 권한요청을 따로 말씀해주세요.
+<br>아마 권한이 없을텐데 권한요청을 따로 말씀해주세요.
 
+<br><br><br>
 ## Google sheet to Json
 https://assetstore.unity.com/packages/tools/utilities/google-sheet-to-json-90369
-에셋을 설치해야 사용이 가능합니다.
+<br>에셋을 설치해야 사용이 가능합니다.
 ![image](https://user-images.githubusercontent.com/33707494/131981668-87ffe6a3-2342-48a5-a4d9-ffc78cb092db.png)
-밑줄친 파일은 제외하고 임포트 해주세요.
+<br>밑줄친 파일은 제외하고 임포트 해주세요.
 
+<br><br><br>
 ## Google Data 사용 방법.
 GlobalState에서 각 데이터 List를 참조해 올 수 있습니다.
 <pre>
@@ -70,6 +72,7 @@ public class GlobalState : MonoBehaviour
 </code>
 </pre>
 
+<br><br><br>
 ### 방법 예시
 <pre>
 <code>
@@ -80,6 +83,7 @@ foreach(ExceldData_Character data in GlobalState.characterList)
 </code>
 </pre>
 
+<br><br><br>
 ## 데이터 .Txt 추가 방법
 Assets>FoxData -> .txt파일들이 있습니다<br>
 ![image](https://user-images.githubusercontent.com/33707494/131983329-9c2f5f83-4ca9-4d8d-8f7e-94b878cf62c4.png)
