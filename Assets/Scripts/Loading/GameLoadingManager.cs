@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameLoadingManager : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class GameLoadingManager : MonoBehaviour
         Btns[0].SetActive(false);
         Btns[1].SetActive(true);
         StartCoroutine(LoadingCoroutine());
+    }
+
+    public void OnStartBtn()
+    {
+        float progress = SceneManager.LoadSceneAsync(1).progress;
     }
 
     IEnumerator LoadingCoroutine()
