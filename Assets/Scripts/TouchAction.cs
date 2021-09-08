@@ -40,17 +40,11 @@ public class TouchAction : MonoBehaviour
                         // 캐릭터 선택 중
                         isSelected = true;
                     }
-                    // 캐릭터를 선택 중인데 다른 곳을 터치하면
-                    else
-                    {
-                        // 캐릭터 선택 해제
-                        isSelected = false;
-                    }
                 }
                 // 터치 후 움직일 시
                 if (touch.phase == TouchPhase.Moved)
                 {
-                    if (hitInfo.collider.tag == "head" && isSelected)
+                    if (hitInfo.collider.tag == "Head" && isSelected)
                     {
                         //anim = hitInfo.transform.GetComponentInParent<Animator>();
 
