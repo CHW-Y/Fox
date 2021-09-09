@@ -10,8 +10,6 @@ public class TouchAction : MonoBehaviour
 
     bool isSelected = false;
 
-
-
     void Update()
     {
         // 터치가 시작되었다면
