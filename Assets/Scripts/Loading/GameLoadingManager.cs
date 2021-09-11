@@ -23,7 +23,6 @@ public class GameLoadingManager : MonoBehaviour
     [SerializeField]
     Animator unityChanAnim;
     
-
     [Serializable]
     class BG
     {

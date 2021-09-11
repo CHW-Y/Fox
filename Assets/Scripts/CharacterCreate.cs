@@ -9,12 +9,11 @@ public class CharacterCreate : MonoBehaviour
 {
     public GameObject unityChan;
 
-    // È­¸é Áß¾Ó¿¡¼­ AR Àü¿ë ·¹ÀÌ¸¦ ¹ß˜¸¼­ Ãæµ¹ÇÑ ÁöÁ¡ÀÌ ¹Ù´ÚÀÌ¶ó¸é ±× À§¿¡ Ä³¸¯ÅÍ¸¦ »ı¼ºÇÑ´Ù
+    // í™”ë©´ ì¤‘ì•™ì—ì„œ AR ì „ìš© ë ˆì´ë¥¼ ë°œÂ˜ë§‘ ì¶©ëŒí•œ ì§€ì ì´ ë°”ë‹¥ì´ë¼ë©´ ê·¸ ìœ„ì— ìºë¦­í„°ë¥¼ ìƒì„±í•œë‹¤
     ARRaycastManager rayManager;
     GameObject unityChanCharacter;
 
     bool isCreate = false;
-
 
     void Start()
     {
@@ -30,12 +29,12 @@ public class CharacterCreate : MonoBehaviour
 
     void UnityChanCreate()
     {
-        // ½ºÅ©¸°ÀÇ Áß¾Ó ÁöÁ¡ÀÇ ÇÈ¼¿ ÁÂÇ¥¸¦ ±¸ÇÑ´Ù
+        // ìŠ¤í¬ë¦°ì˜ ì¤‘ì•™ ì§€ì ì˜ í”½ì…€ ì¢Œí‘œë¥¼ êµ¬í•œë‹¤
         Vector2 centerPos = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
 
         List<ARRaycastHit> hitInfos = new List<ARRaycastHit>();
 
-        // ½ºÅ©¸° Áß¾Ó ÇÈ¼¿¿¡´Ù AR·¹ÀÌ¸¦ ¹ß»çÇØ¼­ ¹Ù´ÚÇüÅÂ¿¡ ºÎµúÇû´Ù¸é...
+        // ìŠ¤í¬ë¦° ì¤‘ì•™ í”½ì…€ì—ë‹¤ ARë ˆì´ë¥¼ ë°œì‚¬í•´ì„œ ë°”ë‹¥í˜•íƒœì— ë¶€ë”ªí˜”ë‹¤ë©´...
         if (rayManager.Raycast(centerPos, hitInfos, TrackableType.Planes) && isCreate == false)
         {
             unityChanCharacter.SetActive(true);
