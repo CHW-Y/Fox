@@ -10,23 +10,100 @@ public class GameLoadingManager : MonoBehaviour
     [SerializeField]
     Slider loadingBar;
 
+    [Serializable]
+    class PlayUI
+    {
+        public GameObject playBtn;
+        public GameObject playImg;
+        public AudioSource playSound;
+    }
     [SerializeField]
-    GameObject[] Btns;
+    PlayUI playUI;
+
+    [SerializeField]
+    Animator unityChanAnim;
+    
+    [Serializable]
+    class BG
+    {
+        [Header("배경")]
+        public MeshRenderer bgMesh;
+
+        [Header("메터리얼")]
+        public Material[] materials;
+    }
+    [SerializeField]
+    BG bg;
 
     void Start()
     {
-        Btns[0].SetActive(false);
-        Btns[1].SetActive(true);
+        playUI.playBtn.SetActive(false);
         StartCoroutine(LoadingCoroutine());
+        SetChangeBackGound();
+
+        StartCoroutine(CoroutineGesture());
+    }
+    /// <summary>
+    /// Gesture Coroutine
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator CoroutineGesture()
+    {
+        WaitForSeconds wait5s = new WaitForSeconds(5);
+        while (true)
+        {
+            SetRandomGesture();
+            yield return wait5s;
+        }
+    }
+    /// <summary>
+    /// Random Gesture
+    /// </summary>
+    public void SetRandomGesture()
+    {
+        string[] trigger = new string[]{ "IdleA","Run","Loop","EmotionClap" };
+        unityChanAnim.SetTrigger(trigger[UnityEngine.Random.Range(0, trigger.Length)]);
     }
 
+    /// <summary>
+    /// Random BackGround
+    /// </summary>
+    public void SetChangeBackGound()
+    {
+        bg.bgMesh.material = bg.materials[UnityEngine.Random.Range(0, bg.materials.Length)];
+    }
+
+    /// <summary>
+    /// Load Scene
+    /// </summary>
     public void OnStartBtn()
     {
-        float progress = SceneManager.LoadSceneAsync(1).progress;
+        playUI.playBtn.SetActive(false);
+        StartCoroutine(PlayBtnFlicker());
+    }
+    IEnumerator PlayBtnFlicker()
+    {
+        playUI.playSound.Play();
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        bool ative = true;
+        while (playUI.playSound.isPlaying)
+        {
+            playUI.playImg.SetActive(ative);
+            yield return wait;
+            ative = !ative;
+        }
+        yield return wait;
+        playUI.playImg.SetActive(false);
+        SceneManager.LoadSceneAsync(1);
     }
 
+
+    /// <summary>
+    /// Loading Process
+    /// </summary>
     IEnumerator LoadingCoroutine()
     {
+        WaitForSeconds wait01s = new WaitForSeconds(0.2f);
         int[] dataCntArray = { GlobalState.itemList.Count, GlobalState.styleList.Count, GlobalState.characterList.Count, GlobalState.gestureList.Count };
         Array.Sort(dataCntArray);
 
@@ -87,13 +164,15 @@ public class GameLoadingManager : MonoBehaviour
                 }
             }
 
+            //로딩바 보여주는 용도(없어도 됨)
+            yield return wait01s;
+
             ++sliderCnt;
             if (loadingBar != null) loadingBar.value = sliderCnt;
         }
       
         yield return new WaitUntil(() => true);
-        Btns[1].SetActive(false);
-        Btns[0].SetActive(true);
+        playUI.playBtn.SetActive(true);
     }
     
 }

@@ -13,14 +13,14 @@ public class PlayerAction : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     //private void OnCollisionEnter(Collision coll)
     //{
     //    if (coll.gameObject.tag == "Food")
     //    {
-    //        print("À½½ÄÀ» ¸Ô´Â´Ù");
+    //        print("ìŒì‹ì„ ë¨¹ëŠ”ë‹¤");
     //        anim.SetTrigger("Eat");
     //    }
     //}
@@ -29,7 +29,7 @@ public class PlayerAction : MonoBehaviour
     {
         if (other.gameObject.tag == "Food")
         {
-            print("À½½ÄÀ» ¸Ô´Â´Ù");
+            print("ìŒì‹ì„ ë¨¹ëŠ”ë‹¤");
             anim.SetTrigger("Eat");
         }
     }
