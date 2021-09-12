@@ -16,4 +16,10 @@ public class GamaDataManager : MonoBehaviour
             //Debug.Log(itemData.ID);
         }
     }
+
+    void SetHpCnt()
+    {
+
+    }
+   
 }
