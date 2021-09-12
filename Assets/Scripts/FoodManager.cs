@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class FoodManager : MonoBehaviour
 {
+    public GameObject FoodUI;
+
     GameObject unityChan;
     Animator anim;
+    StatusManager statusManager;
 
     void Start()
     {
@@ -14,15 +17,17 @@ public class FoodManager : MonoBehaviour
 
     void Update()
     {
-        if (unityChan == null)
-        {
-            unityChan = GameObject.FindWithTag("Girl");
-            anim = unityChan.GetComponent<Animator>();
-        }
+        //if (unityChan == null)
+        //{
+        //    unityChan = GameObject.FindWithTag("Girl");
+        //    anim = unityChan.GetComponent<Animator>();
+        //}
     }
 
     public void OnWaterDrink()
     {
-        anim.SetTrigger("Eat");
+        FoodUI.SetActive(false);
+        //anim.SetTrigger("Eat");
+        statusManager.SetSpCnt(1f);
     }
 }

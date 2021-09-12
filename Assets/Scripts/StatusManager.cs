@@ -17,13 +17,13 @@ public class StatusManager : MonoBehaviour
 
     public void SetHpCnt(float cnt)
     {
-        GlobalState.currentHpCnt = cnt;
+        GlobalState.currentHpCnt += cnt;
         hpCntText.text = cnt.ToString();
     }
 
     public void SetSpCnt(float cnt)
     {
-        GlobalState.currentSpCnt = cnt;
+        GlobalState.currentSpCnt += cnt;
         spCntSlider.value = cnt;
     }
 
