@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +13,7 @@ public class StatusManager : MonoBehaviour
     Text hpCntText;
 
     [SerializeField]
-    Text spCntText;
+    Slider spCntSlider;
 
     public void SetHpCnt(float cnt)
     {
@@ -26,7 +24,8 @@ public class StatusManager : MonoBehaviour
     public void SetSpCnt(float cnt)
     {
         GlobalState.currentSpCnt = cnt;
-        spCntText.text = cnt.ToString();
+        spCntSlider.value = cnt;
+        spCntSlider.maxValue = 10;
     }
 
 }
