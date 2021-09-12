@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class ClosetSetActive : MonoBehaviour
 {
-    public GameObject closetModal;
-    public GameObject closetExit;
-
-    void Start()
-    {
-        closetModal.SetActive(false);
-    }
-
     public void ClosetClick()
     {
-        closetModal.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     public void ClosetExitClick()
     {
-        closetModal.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
