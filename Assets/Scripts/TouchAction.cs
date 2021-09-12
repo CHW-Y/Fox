@@ -44,8 +44,6 @@ public class TouchAction : MonoBehaviour
                 {
                     if (hitInfo.collider.tag == "Head" && isSelected)
                     {
-                        //anim = hitInfo.transform.GetComponentInParent<Animator>();
-
                         // 쓰다듬기 상호작용 애니메이션 실행
                         anim.SetBool("Stroke", true);
                     }
