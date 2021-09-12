@@ -13,4 +13,7 @@ public class GlobalState : MonoBehaviour
     public static Dictionary<string, ExceldData_Style> styleDict;
     public static Dictionary<string, ExceldData_Character> charaterDict;
     public static Dictionary<string, ExceldData_Gesture> gestureDict;
+
+    public static float currentHpCnt;
+    public static float currentSpCnt;
 }
