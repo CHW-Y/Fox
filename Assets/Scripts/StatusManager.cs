@@ -25,7 +25,6 @@ public class StatusManager : MonoBehaviour
     {
         GlobalState.currentSpCnt = cnt;
         spCntSlider.value = cnt;
-        spCntSlider.maxValue = 10;
     }
 
 }
