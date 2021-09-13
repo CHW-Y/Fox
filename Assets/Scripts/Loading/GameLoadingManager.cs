@@ -43,6 +43,7 @@ public class GameLoadingManager : MonoBehaviour
 
         StartCoroutine(CoroutineGesture());
     }
+
     /// <summary>
     /// Gesture Coroutine
     /// </summary>
