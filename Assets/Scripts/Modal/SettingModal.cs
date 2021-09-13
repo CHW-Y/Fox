@@ -41,4 +41,14 @@ public class SettingModal : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public void ResetData()
+    {
+        if (PlayerPrefs.HasKey("currentHpCnt")) PlayerPrefs.SetFloat("currentHpCnt", 0);
+        if (PlayerPrefs.HasKey("currentSpCnt")) PlayerPrefs.SetFloat("currentSpCnt", 0);
+        StatusManager.intance.SetSaveStyle(0);
+        StatusManager.intance.SetHpCnt(-GlobalState.currentHpCnt);
+        StatusManager.intance.SetSpCnt(-GlobalState.currentSpCnt);
+        PlayerPrefs.Save();
+    }
 }

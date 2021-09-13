@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PDH_LoadingScene.unity
     guid: c031ea74473ba4051bbb9dba6127304d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: e93469c0965379a4da1aae84d0c80d2c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/HSP_Scene.unity
     guid: de6f0b5205cf2b84b95c88f2fdc63b85
   m_configObjects:

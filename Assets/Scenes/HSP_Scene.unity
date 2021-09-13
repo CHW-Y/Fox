@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,6 +245,51 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4314891448691363747, guid: 3a0775c11e2bd459d9dcad9e89e18afc, type: 3}
   m_PrefabInstance: {fileID: 94996379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &247316918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247316920}
+  - component: {fileID: 247316919}
+  m_Layer: 0
+  m_Name: StatusManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &247316919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247316918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7994d456f2f0346aeb2a6ac3012341eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpCntText: {fileID: 1219641621}
+  spCntSlider: {fileID: 748706622}
+--- !u!4 &247316920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247316918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321845868
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,8 +753,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 978969508}
         m_TargetAssemblyTypeName: CostumeChange, Assembly-CSharp
-        m_MethodName: CostumeSelect2
-        m_Mode: 1
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1239,9 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057c578ad1339154bb41a9d58974f3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costume0: {fileID: 7247813290313023061, guid: 154dd992b691e8c45907e08032c3f6a0, type: 3}
-  costume1: {fileID: 7247813290313023061, guid: 154dd992b691e8c45907e08032c3f6a0, type: 3}
-  costume2: {fileID: 7247813290313023061, guid: 154dd992b691e8c45907e08032c3f6a0, type: 3}
+  selectedIndex: 0
 --- !u!1 &979688723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,8 +1369,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 978969508}
         m_TargetAssemblyTypeName: CostumeChange, Assembly-CSharp
-        m_MethodName: CostumeSelect1
-        m_Mode: 1
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1951,8 +1994,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 978969508}
         m_TargetAssemblyTypeName: CostumeChange, Assembly-CSharp
-        m_MethodName: CostumeSelect0
-        m_Mode: 1
+        m_MethodName: SetIndex
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2636,12 +2679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7920cdfbb007e49a4bded59ab17f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  girl: {fileID: 0}
-  anim: {fileID: 0}
-  test1: {fileID: 0}
-  test2: {fileID: 0}
-  test3: {fileID: 0}
-  test4: {fileID: 0}
 --- !u!114 &1765171170
 MonoBehaviour:
   m_ObjectHideFlags: 0

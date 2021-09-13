@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class CostumeChange : MonoBehaviour
 {
+    public int selectedIndex;
 
-    public void CostumeSelect0()
+    public void SetIndex(int id)
     {
-        print("베이직");
+        selectedIndex = id;
+        StatusManager.intance.SetSaveStyle(id);
+        GameObject unityChan = GameObject.FindWithTag("Girl");
+        if(unityChan != null)
+        {
+            unityChan.TryGetComponent(out CostumeManager cos);
+            cos.SetCostume();
+        }
     }
-    public void CostumeSelect1()
-    {
-        print("와~ 여름이다!");
-    }
-
-    public void CostumeSelect2()
-    {
-        print("하얗게 눈이 내려와~");
-    }
-
 }
