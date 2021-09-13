@@ -8,26 +8,17 @@ public class FoodManager : MonoBehaviour
 
     GameObject unityChan;
     Animator anim;
-    StatusManager statusManager;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        //if (unityChan == null)
-        //{
-        //    unityChan = GameObject.FindWithTag("Girl");
-        //    anim = unityChan.GetComponent<Animator>();
-        //}
-    }
 
     public void OnWaterDrink()
     {
+        if (unityChan == null)
+        {
+            unityChan = GameObject.FindWithTag("Girl");
+            anim = unityChan.GetComponent<Animator>();
+        }
+
         FoodUI.SetActive(false);
-        //anim.SetTrigger("Eat");
-        statusManager.SetSpCnt(1f);
+        anim.SetTrigger("Eat");
+        StatusManager.intance.SetSpCnt(1f);
     }
 }
