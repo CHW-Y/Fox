@@ -38,6 +38,8 @@ public class CharacterCreate : MonoBehaviour
         if (rayManager.Raycast(centerPos, hitInfos, TrackableType.Planes) && isCreate == false)
         {
             unityChanCharacter.SetActive(true);
+            unityChanCharacter.TryGetComponent(out CostumeManager cos);
+            cos.SetCostume();
             unityChanCharacter.transform.position = hitInfos[0].pose.position;
             //unityChanCharacter.transform.rotation = hitInfos[0].pose.rotation;
             unityChanCharacter.transform.Rotate(unityChanCharacter.transform.up, 180.0f);
