@@ -26,7 +26,7 @@ public class TouchAction : MonoBehaviour
                 if (touch.phase == TouchPhase.Began)
                 {
                     // 선택한 오브젝트의 태그가 Girl이고, 캐릭터 선택 중이 아니라면
-                    if (hitInfo.collider.tag == "Girl" && hitInfo.collider.tag == "Head" && !isSelected)
+                    if (hitInfo.collider.tag == "Girl" && !isSelected)
                     {
                         //hitInfo.transform.gameObject.TryGetComponent(out anim);
                         // 애니메이터를 받아온다.
@@ -37,10 +37,6 @@ public class TouchAction : MonoBehaviour
 
                         // 캐릭터 선택 중
                         isSelected = true;
-                    }
-                    else
-                    {
-                        isSelected = false;
                     }
                 }
                 // 터치 후 움직일 시
